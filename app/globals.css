@@ -1,0 +1,33 @@
+:root{
+  --background__black: #16161A;
+  --background__card__black: #16161A;
+  --stroke__black: #010101;
+
+  --title__main__white: #FFFFFE;
+  --paragraph__gray: #94A1B2;
+
+  --secondary__gray: #72757E;
+  --tertiary__green: #2CB67D;
+
+  --highlight__main__pink: #D94E5A;
+  --highlight__secondary__purple: #7F5AF0;
+  --highlight__tertiary__purple: #2142A6;
+  --highlight__quaternary__purple: #3E3673;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  background-color: var(--background__black);
+  color: white;
+  padding: 0 20%;
+}
+
+@media only screen and (max-width: 768px) {
+  body{
+    padding: 0 10%;
+  }
+}

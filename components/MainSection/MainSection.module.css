@@ -1,0 +1,49 @@
+.main_presentation{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left_pane{
+    width: 50%;
+}
+
+.right_pane{
+    width: 50%;
+    height: 50%;
+    padding-top: 15rem;
+}
+
+.title__principal{
+    font-size: 60px;
+    margin: 0;
+}
+
+.title__secundary{
+    margin: 0;
+    font-size: 15pt;
+    color: var(--highlight__main__pink);
+}
+
+.paragraph__main{
+    font-size: 12pt;
+    color: var(--paragraph__gray);
+    text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+    .main_presentation{
+        padding-top: 15rem;
+        flex-direction: column;
+    }
+
+    .left_pane{
+        width: 100%;
+    }
+
+    .right_pane{
+        width: 100%;
+        padding: 0;
+    }
+}
