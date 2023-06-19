@@ -32,6 +32,8 @@ export default function Navbar() {
         }
     }, [lastScrollY]);
 
+    // Supuesta mejora 😍😍😍
+
     return (
         <header className={show ? style.navbar: style.navbar__hide}>
             <div>
