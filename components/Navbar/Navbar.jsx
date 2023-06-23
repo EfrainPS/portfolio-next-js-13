@@ -1,50 +1,57 @@
 'use client'
 
-import Link from "next/link"
 import style from "./Navbar.module.css"
 import { useState, useEffect } from 'react';
+import Image from "next/image";
+
+const navBarList = [
+    {
+        title: "Inicio",
+        href: "#home"
+    },
+    {
+        title: "Proyectos",
+        href: "#projects"
+    },
+    {
+        title: "Habilidades",
+        href: "#skills"
+    },
+    {
+        title: "Educación",
+        href: "#education"
+    },
+]
 
 export default function Navbar() {
-    const [show, setShow] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const [active, setActive] = useState(false)
 
-    const controlNavbar = () => {
-        if (typeof window !== 'undefined') {
-            if (window.scrollY > lastScrollY) { // if scroll down hide the navbar
-                setShow(false);
-            } else { // if scroll up show the navbar
-                setShow(true);
-            }
-
-            // remember current page location to use in the next move
-            setLastScrollY(window.scrollY);
-        }
-    };
-
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', controlNavbar);
-
-            // cleanup function
-            return () => {
-                window.removeEventListener('scroll', controlNavbar);
-            };
-        }
-    }, [lastScrollY]);
-
-    // Supuesta mejora 😍😍😍
+    const activeNavbar = () => {
+        setActive(!active)
+    }
 
     return (
-        <header className={show ? style.navbar: style.navbar__hide}>
-            <div>
-                <a href="#home" className={style.navbar__list}>Home</a>
-                <a href="#projects" className={style.navbar__list}>Proyectos</a>
-                <a href="#skills" className={style.navbar__list}>Habilidades</a>
-                <a href="#education" className={style.navbar__list}>Educación</a>
-            </div>
-            <div>
-                🧠
-            </div>
+        <header className={style.navbar}>
+            <nav>
+                <div className={active ? style.navbar__list : style.navbar__list_hide}>
+                    {navBarList.map(
+                        (item) =>
+                        (
+                            <a href={item.href} className={style.navbar__object_list} onClick={() => activeNavbar()}>
+                                {item.title}
+                            </a>
+                        )
+                    )}
+                </div>
+                <div className={style.navbar__main_buttons}>
+                    <a className={style.navbar__burguer_button} onClick={() => activeNavbar()}>
+                        ...
+                    </a>
+                    <div className="logo">
+                        Mi Logo
+                    </div>
+                </div>
+            </nav>
         </header>
     )
 }

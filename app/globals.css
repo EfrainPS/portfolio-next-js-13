@@ -7,6 +7,7 @@
   --paragraph__gray: #94A1B2;
 
   --secondary__gray: #72757E;
+  --secondary__gray_dark: #2f3034;
   --tertiary__green: #2CB67D;
 
   --highlight__main__pink: #D94E5A;
@@ -28,6 +29,6 @@ body{
 
 @media only screen and (max-width: 768px) {
   body{
-    padding: 0 10%;
+    padding: 0;
   }
 }

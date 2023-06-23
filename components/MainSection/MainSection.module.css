@@ -34,7 +34,7 @@
 
 @media only screen and (max-width: 768px) {
     .main_presentation{
-        padding-top: 15rem;
+        padding: 15rem 10%;
         flex-direction: column;
     }
 
