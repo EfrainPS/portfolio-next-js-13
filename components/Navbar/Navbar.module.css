@@ -39,6 +39,12 @@
     transition: 0.3s;
 }
 
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+  }
+
 @media only screen and (max-width: 768px) {
     .navbar{
         width: 100%;
@@ -55,10 +61,6 @@
 
         align-items: center;
         transform: translateY(-15rem);
-    }
-
-    .navbar nav{
-        padding: 0 10%;
     }
 
     .navbar__main_buttons{
@@ -91,7 +93,6 @@
         height: 100%;
 
         background-color: var(--highlight__main__pink);
-
         transition: 0.4s;
     }
 
@@ -115,10 +116,11 @@
         text-align: center;
         padding: 3rem 0;
         width: 100%;
+        -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
     }
 
-    .navbar__object_list:hover {
+    .navbar__object_list:hover{
         color: var(--title__main__white);
-        transition: 0.3s;
+        font-size: 16pt;
     }
 }

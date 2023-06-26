@@ -7,19 +7,23 @@ import Image from "next/image";
 const navBarList = [
     {
         title: "Inicio",
-        href: "#home"
+        href: "#home",
+        active: true
     },
     {
         title: "Proyectos",
-        href: "#projects"
+        href: "#projects",
+        active: true
     },
     {
         title: "Habilidades",
-        href: "#skills"
+        href: "#skills",
+        active: false
     },
     {
         title: "Educación",
-        href: "#education"
+        href: "#education",
+        active: false
     },
 ]
 
@@ -37,7 +41,7 @@ export default function Navbar() {
                     {navBarList.map(
                         (item) =>
                         (
-                            <a href={item.href} className={style.navbar__object_list} onClick={() => activeNavbar()}>
+                            <a key={item.href} href={item.href} className={`${style.navbar__object_list} ${item.active ? null : style.disabled}`} onClick={() => activeNavbar()}>
                                 {item.title}
                             </a>
                         )

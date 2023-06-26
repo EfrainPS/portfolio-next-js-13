@@ -18,6 +18,7 @@ export default function MainSection() {
             <div className={styles.right_pane}>
                 <Image
                     src="/main_page/main_image_3.webp"
+                    alt='main_image'
                     width={400}
                     height={300}
                     layout='responsive'
