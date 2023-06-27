@@ -1,0 +1,35 @@
+.Button{
+    display: inline-block;
+    width: fit-content;
+    padding: 0.8rem 2rem;
+    border-radius: 5pt;
+    border: transparent solid 1px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    font-size: 12pt;
+    text-decoration: none;
+    color: var(--title__main__white);
+    box-shadow: inset 0 4px 4px 0 #FFFFFF15;
+}
+
+
+.Button__normal{
+    background-color: var(--highlight__main__pink);
+}
+
+.Button__normal:hover{
+    background-color: #812f36;
+    border: var(--title__main__white) solid 1px;
+    transition: 0.2s;
+}
+
+.Button__main{
+    background-color: var(--secondary__gray_dark);
+    border: var(--highlight__main__pink) solid 1px;
+}
+
+.Button__main:hover{
+    background-color: #080808;
+    transition: 0.2s;
+}
