@@ -1,6 +1,9 @@
 :root{
-  --background__black: #16161A;
-  --background__card__black: #16161A;
+  /* Colors */
+  /* --background__black: #010101; old version */
+  --background__black: #101015;
+  /* --background__card__black: #16161A; old version */
+  --background__card__black: #2b2b2bdb;
   --stroke__black: #010101;
 
   --title__main__white: #FFFFFE;
@@ -11,9 +14,16 @@
   --tertiary__green: #2CB67D;
 
   --highlight__main__pink: #D94E5A;
-  --highlight__secondary__purple: #7F5AF0;
-  --highlight__tertiary__purple: #2142A6;
-  --highlight__quaternary__purple: #3E3673;
+  --highlight__main__purple: #7F5AF0;
+  --highlight__secondary__purple: #CA9BF7;
+  --highlight__tertiary__purple: #3E3673;
+  --highlight__main__yellow: #ffd13c;
+  --highlight__main__blue: #73c3c5;
+
+  /* Fonts */
+  --main_title__font_size: 50pt;
+  --title__font_size: 15pt;
+  --paragraph__font_size: 11pt;
 }
 
 html{

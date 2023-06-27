@@ -2,7 +2,6 @@
 
 import style from "./Navbar.module.css"
 import { useState, useEffect } from 'react';
-import Image from "next/image";
 
 const navBarList = [
     {
@@ -37,7 +36,7 @@ export default function Navbar() {
     return (
         <header className={style.navbar}>
             <nav>
-                <div className={active ? style.navbar__list : style.navbar__list_hide}>
+                <div className={`${style.navbar__list} ${active ? null : style.hidden}`}>
                     {navBarList.map(
                         (item) =>
                         (

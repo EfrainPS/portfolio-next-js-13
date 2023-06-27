@@ -1,6 +1,6 @@
-import MainSection from '@/components/MainSection/MainSection'
-import Projects from '@/components/Proyects/Projects'
-import styles from "./page.module.css"
+import MainSection from '@/components/views/MainSection/MainSection'
+import Projects from '@/components/views/Projects/Projects'
+import styles from "./Page.module.css"
 
 
 export default function Home() {
