@@ -7,7 +7,7 @@ export default function StyledImage(props) {
             <Image
                 src={props.srcValue}
                 alt={props.altValue}
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 fill={true}
                 style={{ objectFit: props.objectFitValue }}
             />

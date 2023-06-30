@@ -32,15 +32,17 @@ export default function SkillsCard({ skillsGroup }) {
                 <div className={style.card__group_icons_container}>
                     {skillsGroup.collection_skills.map(
                         (skill) => (
-                            <div className={style.card__icons_container}>
+                            <div className={style.card__icons_container} key={skill.label}>
                                 <div className={`${style.card__icon} ${selectedSkillsGroup.styleApplied}`}>
                                     <StyledImage
-                                        srcValue={`/tools_icons/${skill.name_image}`}
+                                        srcValue={`/images/tools_icons/${skill.name_image}`}
                                         altValue={skill.label}
                                         objectFitValue={"contain"}
                                     />
                                 </div>
-                                <span className={style.card__icon_label}>{skill.label}</span>
+                                <span className={style.card__icon_label}>
+                                    {skill.label}
+                                </span>
                             </div>
                         )
                     )}

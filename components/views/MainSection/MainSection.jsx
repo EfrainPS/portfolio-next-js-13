@@ -6,8 +6,20 @@ import StyledImage from '@/components/common/StyledImage/StyledImage'
 const mainData = [
     {
         principal_title: "Efrain Pizarro",
-        secundary_title: "Ingeniero Multimedia",
-        presentation: "¡Hola! Soy un apasionado de los datos, el desarrollo web y el diseño gráfico. Actualmente, me encuentro en un emocionante camino que combina habilidades de desarrollador de BI, ingeniero de datos y científico de datos."
+        secundary_title: "Desarrollador Fullstack",
+        presentation: "¡Hola! Soy un apasionado de los datos, el desarrollo web y el diseño gráfico. Actualmente, me encuentro en un emocionante camino que combina habilidades de desarrollador de BI, ingeniero de datos y científico de datos.",
+        buttons: [
+            {
+                label: "Hablemos",
+                isHighlighted: true,
+                url: "https://www.linkedin.com/in/efrain-pizarro-soto/"
+            },
+            {
+                label: "Mira mi CV",
+                isHighlighted: false,
+                url: "/documents/CV_EFRAIN_PIZARRO.pdf"
+            }
+        ]
     }
 ]
 
@@ -31,13 +43,18 @@ export default function MainSection() {
                 <p className={styles.paragraph__main}>
                     {initialData.presentation}
                 </p>
-                <Button content={"Hablemos"} isHighlighted={true}/>
-                <Button content={"Descargar mi CV"} />
+                {
+                    initialData.buttons.map(
+                        (button) => (
+                            <Button content={button.label} isHighlighted={button.isHighlighted} url={button.url}/>
+                        )
+                    )
+                }
             </div>
             <div className={styles.right_pane}>
                 <StyledImage
                     objectFitValue="contain"
-                    srcValue={`/main_page/main_image_${numberRandom()}.webp`}
+                    srcValue={`/images/main_page/main_image_${numberRandom()}.webp`}
                     altValue="main_image"
                 />
             </div>

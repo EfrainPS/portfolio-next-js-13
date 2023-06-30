@@ -3,6 +3,8 @@
 import style from "./Navbar.module.css"
 import { useState, useEffect } from 'react';
 
+import StyledImage from "../StyledImage/StyledImage";
+
 const navBarList = [
     {
         title: "Inicio",
@@ -18,11 +20,6 @@ const navBarList = [
         title: "Habilidades",
         href: "#skills",
         active: true
-    },
-    {
-        title: "Educación",
-        href: "#education",
-        active: false
     },
 ]
 
@@ -50,8 +47,12 @@ export default function Navbar() {
                     <a className={style.navbar__burguer_button} onClick={() => activeNavbar()}>
                         ...
                     </a>
-                    <div className="logo">
-                        Mi Logo
+                    <div className={style.navbar__logo}>
+                        <StyledImage 
+                            srcValue = {"/images/my_brand/logo_neg.png"}
+                            altValue = {"logo"}
+                            objectFitValue = {"contain"}
+                        />
                     </div>
                 </div>
             </nav>

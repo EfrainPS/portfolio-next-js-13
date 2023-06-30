@@ -86,7 +86,7 @@ export default function Skills() {
             </p>
             {initialData.skills.map(
                 (skillsGroup) => (
-                    <SkillsCard skillsGroup={skillsGroup}/>
+                    <SkillsCard key={skillsGroup.type_skill} skillsGroup={skillsGroup}/>
                 )
             )}
         </section>
