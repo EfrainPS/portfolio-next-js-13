@@ -17,7 +17,7 @@ const navBarList = [
     {
         title: "Habilidades",
         href: "#skills",
-        active: false
+        active: true
     },
     {
         title: "Educación",

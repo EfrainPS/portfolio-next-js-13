@@ -31,7 +31,8 @@ export default function MainSection() {
                 <p className={styles.paragraph__main}>
                     {initialData.presentation}
                 </p>
-                <Button content={"Contáctame"} />
+                <Button content={"Hablemos"} isHighlighted={true}/>
+                <Button content={"Descargar mi CV"} />
             </div>
             <div className={styles.right_pane}>
                 <StyledImage

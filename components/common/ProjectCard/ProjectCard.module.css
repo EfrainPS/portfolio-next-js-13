@@ -1,8 +1,8 @@
 .card__container {
-    background-color: var(--background__card__black);
+    /* background-color: var(--background__card__black); */
 
-    width: 100%;
-    min-height: 50vh;
+    width: 80%;
+    min-height: 40vh;
     margin: 5rem 0;
 
     display: flex;
@@ -18,7 +18,7 @@
 
 .card__content {
     width: 50%;
-    padding: 4rem;
+    padding: 1rem 0 1rem 4rem;
 }
 
 .card__paragraph {
@@ -66,6 +66,7 @@
 @media only screen and (max-width: 768px) {
     .card__container{
         flex-direction: column;
+        width: 100%;
     }
 
     .card__image {

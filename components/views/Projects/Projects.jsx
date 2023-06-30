@@ -18,7 +18,7 @@ const projectsList = [
                 used_technologies:[
                     {
                         label: "React JS",
-                        name_image: "react.png"
+                        name_image: "reactjs.png"
                     },
                     {
                         label: "Next JS",
@@ -41,7 +41,7 @@ const projectsList = [
                 used_technologies:[
                     {
                         label: "React JS",
-                        name_image: "react.png"
+                        name_image: "reactjs.png"
                     }
                 ]
             },
