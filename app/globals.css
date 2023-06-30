@@ -2,6 +2,7 @@
   /* Colors */
   /* --background__black: #010101; old version */
   --background__black: #101015;
+  --background__black_opacity_30: #10101530;
   /* --background__card__black: #16161A; old version */
   --background__card__black: #2b2b2bdb;
   --stroke__black: #010101;

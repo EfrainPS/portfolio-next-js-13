@@ -10,7 +10,7 @@ const projectsList = [
             {
                 title_project: "Proyecto 1",
                 short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                url_image_project: "/projects/project_1.png",
+                name_image_project: "project_1.png",
                 alt_image_project: "Image of project 1",
                 type_project: "frontend",
                 url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
@@ -34,7 +34,7 @@ const projectsList = [
             {
                 title_project: "Proyecto 2",
                 short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                url_image_project: "/projects/project_2.png",
+                name_image_project: "project_2.png",
                 alt_image_project: "Image of project 2",
                 type_project: "data_science",
                 url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
@@ -48,7 +48,7 @@ const projectsList = [
             {
                 title_project: "Proyecto 3",
                 short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                url_image_project: "/projects/project_3.png",
+                name_image_project: "project_3.png",
                 alt_image_project: "Image of project 3",
                 type_project: "backend",
                 url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
@@ -62,7 +62,7 @@ const projectsList = [
             {
                 title_project: "Proyecto 4",
                 short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                url_image_project: "/projects/project_4.png",
+                name_image_project: "project_4.png",
                 alt_image_project: "Image of project 4",
                 type_project: "dataviz",
                 url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
@@ -97,9 +97,10 @@ export default function Projects() {
                 initialData.projects.map(
                     (project) => (
                         <ProjectCard
+                            key={project.title_project}
                             title={project.title_project}
                             short_desc={project.short_desc_project}
-                            url_image={project.url_image_project}
+                            name_image={project.name_image_project}
                             alt_image={project.alt_image_project}
                             type={project.type_project}
                             url_code={project.url_code_project}

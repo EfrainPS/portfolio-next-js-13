@@ -23,7 +23,7 @@ const typeLabel = {
 }
 
 
-export default function ProjectCard({ title, short_desc, url_image, alt_image, type, url_code, url_online_site, used_technologies }) {
+export default function ProjectCard({ title, short_desc, name_image, alt_image, type, url_code, url_online_site, used_technologies }) {
     const selectedLabel = typeLabel[type]
 
     return (
@@ -31,7 +31,7 @@ export default function ProjectCard({ title, short_desc, url_image, alt_image, t
             <div className={style.card__image}>
                 <StyledImage
                     objectFitValue="cover"
-                    srcValue={url_image}
+                    srcValue={`/images/projects/${name_image}`}
                     altValue={alt_image}
                 />
             </div>
@@ -47,10 +47,10 @@ export default function ProjectCard({ title, short_desc, url_image, alt_image, t
                     {
                         used_technologies.map(
                             (technology) => (
-                                <div className={style.card__technologies_object}>
+                                <div className={style.card__technologies_object} key={technology.label}>
                                     <StyledImage
                                         objectFitValue="contain"
-                                        srcValue={`/tools_icons/${technology.name_image}`}
+                                        srcValue={`/images/tools_icons/${technology.name_image}`}
                                         altValue={technology.label}
                                     />
                                 </div>
