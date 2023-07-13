@@ -1,29 +1,13 @@
 'use client'
 
 import style from "./Navbar.module.css"
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import StyledImage from "../StyledImage/StyledImage";
 
-const navBarList = [
-    {
-        title: "Inicio",
-        href: "#home",
-        active: true
-    },
-    {
-        title: "Proyectos",
-        href: "#projects",
-        active: true
-    },
-    {
-        title: "Habilidades",
-        href: "#skills",
-        active: true
-    },
-]
-
-export default function Navbar() {
+export default function Navbar({ content }) {
+    const initialData = content
+    
     const [active, setActive] = useState(false)
 
     const activeNavbar = () => {
@@ -34,7 +18,7 @@ export default function Navbar() {
         <header className={style.navbar}>
             <nav>
                 <div className={`${style.navbar__list} ${active ? null : style.hidden}`}>
-                    {navBarList.map(
+                    {initialData["options"].map(
                         (item) =>
                         (
                             <a key={item.href} href={item.href} className={`${style.navbar__object_list} ${item.active ? null : style.disabled}`} onClick={() => activeNavbar()}>
@@ -49,7 +33,7 @@ export default function Navbar() {
                     </a>
                     <div className={style.navbar__logo}>
                         <StyledImage 
-                            srcValue = {"/images/my_brand/logo_neg.png"}
+                            srcValue = {`/images/${initialData["logo"]}`}
                             altValue = {"logo"}
                             objectFitValue = {"contain"}
                         />

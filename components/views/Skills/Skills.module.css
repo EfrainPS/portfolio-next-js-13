@@ -8,6 +8,8 @@
 }
 
 .title{
+    width: 100%;
+    text-align: left;
     margin: 0;
     font-size: var(--title__font_size);
     color: var(--title__main__white);

@@ -1,7 +1,5 @@
 .card__container {
-    /* background-color: var(--background__card__black); */
-
-    width: 80%;
+    width: 90%;
     min-height: 40vh;
     margin: 5rem 0;
 

@@ -1,0 +1,154 @@
+{
+    "navBar": {
+        "logo": "my_brand/logo_neg.png",
+        "options": [
+            {
+                "title": "Inicio",
+                "href": "#home",
+                "active": true
+            },
+            {
+                "title": "Proyectos",
+                "href": "#projects",
+                "active": true
+            },
+            {
+                "title": "Habilidades",
+                "href": "#skills",
+                "active": true
+            }
+        ]
+    },
+    "mainView": {
+        "principal_title": "Efrain Pizarro",
+        "secundary_title": "UX Developer",
+        "presentation": "¡Bienvenidos a mi mundo digital! Como UX Developer, fusiono diseño y <strong>datos</strong> para crear experiencias cautivadoras. <br><br>Explora mi portafolio y descubre cómo trabajo para potenciar la interacción humana a través de soluciones impactantes y efectivas.",
+        "buttons": [
+            {
+                "label": "Hablemos",
+                "isHighlighted": true,
+                "url": "https://www.linkedin.com/in/efrain-pizarro-soto/"
+            },
+            {
+                "label": "Mira mi CV",
+                "isHighlighted": false,
+                "url": "/documents/CV_EFRAIN_PIZARRO.pdf"
+            }
+        ]
+    },
+    "projectView": {
+        "title_page": "Proyectos",
+        "desc_page": "Donde la creatividad y los datos se fusionan en experiencias. Desde la optimización de flujos de usuario hasta la creación de interfaces innovadoras, cada proyecto es un desafío donde la intuición y los números se combinan para ofrecer soluciones excepcionales y atractivas.",
+        "projects": [
+            {
+                "title_project": "Página web para Bamboo Analytics S.A.S.",
+                "short_desc_project": "Tuve el privilegio de diseñar y desarrollar la primera aplicación web de la empresa, anteriormente conocida como Bamboo Analytics. Esta plataforma muestra información crucial y cuenta con un blog integrado.<br><br>Una de las características destacadas de este sitio es su capacidad para cambiar automáticamente el idioma según la región desde la cual se consulta. No obstante, también se brinda la opción de cambiar el idioma manualmente.",
+                "name_image_project": "bamboo_analytics.png",
+                "alt_image_project": "Image of project 1",
+                "type_project": "frontend",
+                "url_code_project": "https://github.com/EfrainPS/bamboo-analytics-web-site-reactjs-16.12.0",
+                "url_online_site_project": null,
+                "used_technologies":[
+                    {
+                        "label": "React JS v16.12.0",
+                        "name_image": "reactjs.png"
+                    }
+                ]
+
+            },
+            {
+                "title_project": "Comportamiento de Covid en el mundo",
+                "short_desc_project": "Desarrollé un panel de control en Power BI que presenta de manera clara y concisa el progreso de los casos de COVID-19 a nivel mundial. <br><br>Me sumergí en un proceso completo de extracción, transformación y carga de datos (ETL) para garantizar la calidad de la información. <br><br>Luego, construí visualizaciones para comprender y analizar la situación de una manera eficaz.",
+                "name_image_project": "covid_cases.png",
+                "alt_image_project": "Image of project 4",
+                "type_project": "dataviz",
+                "url_code_project": "https://github.com/EfrainPS/covid-cases-in-the-world",
+                "url_online_site_project": "https://app.powerbi.com/view?r=eyJrIjoiZGJlYjY1MjAtOGNlMS00YzQxLWJhNGUtZWIwYzAzMTQ2NjAzIiwidCI6IjY5M2NiZWEwLTRlZjktNDI1NC04OTc3LTc2ZTA1Y2I1ZjU1NiIsImMiOjR9",
+                "used_technologies":[
+                    {
+                        "label": "Power BI",
+                        "name_image": "powerbi.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "skillsView": {
+        "title_page": "Habilidades",
+        "desc_page": "Adéntrate en mi mundo de habilidades, donde combino la creatividad con el análisis de datos para crear experiencias impactantes. Como UX Developer, fusiono mi pasión por el diseño intuitivo con un enfoque basado en datos para ofrecer soluciones únicas y cautivadoras.",
+        "skills": [
+            {
+                "type_skill": "frontend",
+                "collection_skills": [
+                    {
+                        "label": "Next JS",
+                        "name_image": "nextjs.png"
+                    },
+                    {
+                        "label": "React JS",
+                        "name_image": "reactjs.png"
+                    }
+                ]
+            },
+            {
+                "type_skill": "backend",
+                "collection_skills": [
+                    {
+                        "label": "Firebase",
+                        "name_image": "firebase.png"
+                    },
+                    {
+                        "label": "Node js",
+                        "name_image": "nodejs.png"
+                    },
+                    {
+                        "label": "Fast API",
+                        "name_image": "fastapi.png"
+                    }
+                ]
+            },
+            {
+                "type_skill": "dataviz",
+                "collection_skills": [
+                    {
+                        "label": "Power BI",
+                        "name_image": "powerbi.png"
+                    },
+                    {
+                        "label": "Looker",
+                        "name_image": "looker.png"
+                    },
+                    {
+                        "label": "Spotfire",
+                        "name_image": "spotfire.png"
+                    }
+                ]
+            },
+            {
+                "type_skill": "data_science",
+                "collection_skills": [
+                    {
+                        "label": "Python",
+                        "name_image": "python.png"
+                    },
+                    {
+                        "label": "MySQL",
+                        "name_image": "mysql.png"
+                    },
+                    {
+                        "label": "Postgre- \n SQL",
+                        "name_image": "postgresql.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "CallToAction": {
+        "message": "¡Comencemos a crear juntos! Si buscas experiencias digitales cautivadoras que impulsen el crecimiento de tu negocio, no dudes en contactarme. Estoy listo para colaborar en tu próximo proyecto.",
+        "button": {
+            "label": "Hablemos",
+            "isHighlighted": false,
+            "url": "https://www.linkedin.com/in/efrain-pizarro-soto/"
+        }
+    }
+}
