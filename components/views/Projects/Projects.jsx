@@ -1,89 +1,11 @@
+import parse from 'html-react-parser'
 
 import styles from "./Projects.module.css"
 import ProjectCard from "../../common/ProjectCard/ProjectCard"
 
-const projectsList = [
-    {
-        title_page: "Proyectos",
-        desc_page: "En esta sección vamos a hablar de los proyectos realizados... Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
-        projects: [
-            {
-                title_project: "Proyecto 1",
-                short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                name_image_project: "project_1.png",
-                alt_image_project: "Image of project 1",
-                type_project: "frontend",
-                url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
-                url_online_site_project: "http://localhost:3000/",
-                used_technologies:[
-                    {
-                        label: "React JS",
-                        name_image: "reactjs.png"
-                    },
-                    {
-                        label: "Next JS",
-                        name_image: "nextjs.png"
-                    },
-                    {
-                        label: "Firebase",
-                        name_image: "firebase.png"
-                    }
-                ]
 
-            },
-            {
-                title_project: "Proyecto 2",
-                short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                name_image_project: "project_2.png",
-                alt_image_project: "Image of project 2",
-                type_project: "data_science",
-                url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
-                used_technologies:[
-                    {
-                        label: "React JS",
-                        name_image: "reactjs.png"
-                    }
-                ]
-            },
-            {
-                title_project: "Proyecto 3",
-                short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                name_image_project: "project_3.png",
-                alt_image_project: "Image of project 3",
-                type_project: "backend",
-                url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
-                used_technologies:[
-                    {
-                        label: "Firebase",
-                        name_image: "firebase.png"
-                    }
-                ]
-            },
-            {
-                title_project: "Proyecto 4",
-                short_desc_project: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                name_image_project: "project_4.png",
-                alt_image_project: "Image of project 4",
-                type_project: "dataviz",
-                url_code_project: "https://github.com/EfrainPS/portfolio-next-js-13",
-                url_online_site_project: "http://localhost:3000/",
-                used_technologies:[
-                    {
-                        label: "Next JS",
-                        name_image: "nextjs.png"
-                    },
-                    {
-                        label: "Firebase",
-                        name_image: "firebase.png"
-                    }
-                ]
-            },
-        ]
-    },
-]
-
-export default function Projects() {
-    const initialData = projectsList[0]
+export default function Projects({ content }) {
+    const initialData = content
 
     return (
         <section id='projects' className={styles.container}>
@@ -91,7 +13,7 @@ export default function Projects() {
                 {initialData.title_page}
             </h3>
             <p className={styles.paragraph}>
-                {initialData.desc_page}
+                {parse(initialData.desc_page)}
             </p>
             {
                 initialData.projects.map(

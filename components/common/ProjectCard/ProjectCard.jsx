@@ -1,3 +1,5 @@
+import parse from 'html-react-parser'
+
 import style from "./ProjectCard.module.css"
 
 import Button from "../Button/Button"
@@ -41,7 +43,7 @@ export default function ProjectCard({ title, short_desc, name_image, alt_image, 
                     {title}
                 </h3>
                 <p className={style.card__paragraph}>
-                    {short_desc}
+                    {parse(short_desc)}
                 </p>
                 <section className={style.card__technologies}>
                     {

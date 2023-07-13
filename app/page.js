@@ -1,16 +1,19 @@
 import MainSection from '@/components/views/MainSection/MainSection'
 import Projects from '@/components/views/Projects/Projects'
 import Skills from '@/components/views/Skills/skills'
-import styles from "./Page.module.css"
+import Navbar from "../components/common/Navbar/Navbar"
+
+import contentData from "@/content/en.json"
 
 
 export default function Home() {
   
   return (
     <main>
-      <MainSection />
-      <Projects />
-      <Skills />
+      <Navbar content={contentData["navBar"]}/>
+      <MainSection content={contentData["mainView"]}/>
+      <Projects content={contentData["projectView"]}/>
+      <Skills content={contentData["skillsView"]}/>
     </main>
   )
 }
