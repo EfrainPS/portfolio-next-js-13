@@ -2,8 +2,8 @@ import parse from 'html-react-parser'
 
 import styles from './MainSection.module.css'
 
-import Button from '@/components/common/Button/Button'
-import StyledImage from '@/components/common/StyledImage/StyledImage'
+import Button from '../../common/Button/Button'
+import StyledImage from '../../common/StyledImage/StyledImage'
 
 export default function MainSection({ content }) {
     const initialData = content
