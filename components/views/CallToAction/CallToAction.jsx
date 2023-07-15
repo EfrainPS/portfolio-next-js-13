@@ -1,7 +1,7 @@
 import style from "./CallToAction.module.css"
 import parse from 'html-react-parser'
 
-import Button from "../../components/common/Button/Button"
+import Button from "../../common/Button/Button"
 
 export default function CallToAction({ content }) {
     return (
