@@ -1,7 +1,7 @@
 import parse from 'html-react-parser'
 
 import styles from "./Skills.module.css"
-import SkillsCard from "@/components/common/SkillsCard/SkillsCard"
+import SkillsCard from "../../common/SkillsCard/SkillsCard"
 
 export default function Skills({ content }) {
     const initialData = content
