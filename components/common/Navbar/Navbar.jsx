@@ -1,33 +1,13 @@
 'use client'
 
 import style from "./Navbar.module.css"
-import { useState, useEffect } from 'react';
-import Image from "next/image";
+import { useState } from 'react';
 
-const navBarList = [
-    {
-        title: "Inicio",
-        href: "#home",
-        active: true
-    },
-    {
-        title: "Proyectos",
-        href: "#projects",
-        active: true
-    },
-    {
-        title: "Habilidades",
-        href: "#skills",
-        active: false
-    },
-    {
-        title: "Educación",
-        href: "#education",
-        active: false
-    },
-]
+import StyledImage from "../StyledImage/StyledImage";
 
-export default function Navbar() {
+export default function Navbar({ content }) {
+    const initialData = content
+    
     const [active, setActive] = useState(false)
 
     const activeNavbar = () => {
@@ -37,8 +17,8 @@ export default function Navbar() {
     return (
         <header className={style.navbar}>
             <nav>
-                <div className={active ? style.navbar__list : style.navbar__list_hide}>
-                    {navBarList.map(
+                <div className={`${style.navbar__list} ${active ? null : style.hidden}`}>
+                    {initialData["options"].map(
                         (item) =>
                         (
                             <a key={item.href} href={item.href} className={`${style.navbar__object_list} ${item.active ? null : style.disabled}`} onClick={() => activeNavbar()}>
@@ -51,8 +31,12 @@ export default function Navbar() {
                     <a className={style.navbar__burguer_button} onClick={() => activeNavbar()}>
                         ...
                     </a>
-                    <div className="logo">
-                        Mi Logo
+                    <div className={style.navbar__logo}>
+                        <StyledImage 
+                            srcValue = {`/images/${initialData["logo"]}`}
+                            altValue = {"logo"}
+                            objectFitValue = {"contain"}
+                        />
                     </div>
                 </div>
             </nav>

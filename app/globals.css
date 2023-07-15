@@ -1,34 +1,87 @@
-:root{
-  --background__black: #16161A;
-  --background__card__black: #16161A;
+:root {
+  /* Colors */
+  /* --background__black: #010101; old version */
+  --background__black: #101015;
+  --background__black_opacity_30: #10101530;
+  /* --background__card__black: #16161A; old version */
+  --background__card__black: #2b2b2bdb;
   --stroke__black: #010101;
 
   --title__main__white: #FFFFFE;
   --paragraph__gray: #94A1B2;
+  --paragraph_highlight__gray: #dae0e7;
 
   --secondary__gray: #72757E;
   --secondary__gray_dark: #2f3034;
   --tertiary__green: #2CB67D;
 
   --highlight__main__pink: #D94E5A;
-  --highlight__secondary__purple: #7F5AF0;
-  --highlight__tertiary__purple: #2142A6;
-  --highlight__quaternary__purple: #3E3673;
+  --highlight__main__purple: #7F5AF0;
+  --highlight__secondary__purple: #CA9BF7;
+  --highlight__tertiary__purple: #3E3673;
+  --highlight__main__yellow: #ffd13c;
+  --highlight__main__blue: #73c3c5;
+
+  --gradient__color: linear-gradient(to right, var(--highlight__main__pink), var(--highlight__main__blue));
+
+  /* Fonts */
+  --main_title__font_size: 50pt;
+  --title__font_size: 18pt;
+  --paragraph__font_size: 12pt;
+  --labels__font_size: 10pt;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
   background-color: var(--background__black);
   color: white;
   padding: 0 20%;
+
+  background-image: radial-gradient(rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+  background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  var(--background__black) 0%, var(--secondary__gray_dark) 30%, var(--background__black_opacity_30) 90% );
+}
+
+strong {
+  color: var(--paragraph_highlight__gray);
+}
+
+h1 {
+  font-size: var(--main_title__font_size);
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: var(--title__font_size);
+
+  background: var(--gradient__color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  color: var(--paragraph_highlight__gray);
+}
+
+p {
+  font-size: var(--paragraph__font_size);
+  color: var(--paragraph__gray);
+  text-align: left;
+  line-height: 1.5;
+}
+
+span {
+  font-size: var(--labels__font_size);
+  color: var(--paragraph_highlight__gray);
 }
 
 @media only screen and (max-width: 768px) {
-  body{
+  body {
     padding: 0 10%;
   }
 }

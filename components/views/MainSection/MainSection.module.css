@@ -1,0 +1,36 @@
+.main_presentation{
+    height: 110vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.left_pane{
+    width: 50%;
+}
+
+.right_pane{
+    width: 50%;
+    height: 100%;
+    padding-left: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .main_presentation{
+        padding-top: 4rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left_pane{
+        width: 100%;
+    }
+
+    .right_pane{
+        padding-left: 0;
+        margin-top: 3rem;
+        width: 100%;
+        height: 30%;
+    }
+}
