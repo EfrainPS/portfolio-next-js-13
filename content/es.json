@@ -16,23 +16,28 @@
                 "title": "Habilidades",
                 "href": "#skills",
                 "active": true
+            },
+            {
+                "title": "Contáctame",
+                "href": "#contact",
+                "active": true
             }
         ]
     },
     "mainView": {
         "principal_title": "Efrain Pizarro",
-        "secundary_title": "UX Developer",
+        "secundary_title": "UX Engineer",
         "presentation": "¡Bienvenidos a mi mundo digital! Como UX Developer, fusiono diseño y <strong>datos</strong> para crear experiencias cautivadoras. <br><br>Explora mi portafolio y descubre cómo trabajo para potenciar la interacción humana a través de soluciones impactantes y efectivas.",
         "buttons": [
             {
                 "label": "Hablemos",
-                "isHighlighted": true,
+                "isHighlighted": false,
                 "url": "https://www.linkedin.com/in/efrain-pizarro-soto/"
             },
             {
                 "label": "Mira mi CV",
-                "isHighlighted": false,
-                "url": "/documents/CV_EFRAIN_PIZARRO.pdf"
+                "isHighlighted": true,
+                "url": "/documents/cv_efrain_pizarro_es.pdf"
             }
         ]
     },
@@ -46,11 +51,21 @@
                 "name_image_project": "bamboo_analytics.png",
                 "alt_image_project": "Image of project 1",
                 "type_project": "frontend",
-                "url_code_project": "https://github.com/EfrainPS/bamboo-analytics-web-site-reactjs-16.12.0",
-                "url_online_site_project": null,
+                "button": [
+                    {
+                        "label": "Ver código",
+                        "url": "https://github.com/EfrainPS/bamboo-analytics-web-site-reactjs-16.12.0",
+                        "isHighlighted": false
+                    },
+                    {
+                        "label": "Ver sitio",
+                        "url": null,
+                        "isHighlighted": true
+                    }
+                ],
                 "used_technologies":[
                     {
-                        "label": "React JS v16.12.0",
+                        "label": "React JS",
                         "name_image": "reactjs.png"
                     }
                 ]
@@ -62,12 +77,46 @@
                 "name_image_project": "covid_cases.png",
                 "alt_image_project": "Image of project 4",
                 "type_project": "dataviz",
-                "url_code_project": "https://github.com/EfrainPS/covid-cases-in-the-world",
-                "url_online_site_project": "https://app.powerbi.com/view?r=eyJrIjoiZGJlYjY1MjAtOGNlMS00YzQxLWJhNGUtZWIwYzAzMTQ2NjAzIiwidCI6IjY5M2NiZWEwLTRlZjktNDI1NC04OTc3LTc2ZTA1Y2I1ZjU1NiIsImMiOjR9",
+                "button": [
+                    {
+                        "label": "Ver código",
+                        "url": "https://github.com/EfrainPS/covid-cases-in-the-world",
+                        "isHighlighted": false
+                    },
+                    {
+                        "label": "Ver sitio",
+                        "url": "https://app.powerbi.com/view?r=eyJrIjoiZGJlYjY1MjAtOGNlMS00YzQxLWJhNGUtZWIwYzAzMTQ2NjAzIiwidCI6IjY5M2NiZWEwLTRlZjktNDI1NC04OTc3LTc2ZTA1Y2I1ZjU1NiIsImMiOjR9",
+                        "isHighlighted": true
+                    }
+                ],
                 "used_technologies":[
                     {
                         "label": "Power BI",
                         "name_image": "powerbi.png"
+                    }
+                ]
+            },
+            {
+                "title_project": "Mi Portafolio",
+                "short_desc_project": "¡Echa un vistazo a este portafolio que he creado para mostrar mis proyectos anteriores! Cada vista fue cuidadosamente diseñada en Figma y lo he desarrollado utilizando la potencia de Next JS 13. Aunque aún hay algunas características pendientes, las iré lanzando gradualmente a lo largo del tiempo. ¡Así que estate atento!",
+                "name_image_project": "my_portfolio.png",
+                "alt_image_project": "Image of project 4",
+                "type_project": "frontend",
+                "button": [
+                    {
+                        "label": "Ver código",
+                        "url": "https://github.com/EfrainPS/portfolio-next-js-13",
+                        "isHighlighted": false
+                    }
+                ],
+                "used_technologies":[
+                    {
+                        "label": "Next JS",
+                        "name_image": "nextjs.png"
+                    },
+                    {
+                        "label": "Figma",
+                        "name_image": "figma.png"
                     }
                 ]
             }
@@ -134,17 +183,14 @@
                     {
                         "label": "MySQL",
                         "name_image": "mysql.png"
-                    },
-                    {
-                        "label": "Postgre- \n SQL",
-                        "name_image": "postgresql.png"
                     }
                 ]
             }
         ]
     },
     "CallToAction": {
-        "message": "¡Comencemos a crear juntos! Si buscas experiencias digitales cautivadoras que impulsen el crecimiento de tu negocio, no dudes en contactarme. Estoy listo para colaborar en tu próximo proyecto.",
+        "message": "¡Comencemos a crear juntos! Si buscas experiencias digitales cautivadoras que impulsen el crecimiento de tu negocio, no dudes en contactarme.",
+        "call_to_action_message": "Estoy listo para colaborar en tu próximo proyecto.",
         "button": {
             "label": "Hablemos",
             "isHighlighted": false,

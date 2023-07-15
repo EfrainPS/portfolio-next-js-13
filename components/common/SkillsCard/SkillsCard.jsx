@@ -1,21 +1,21 @@
 import style from "./SkillsCard.module.css"
-import StyledImage from "../StyledImage/StyledImage"
+import AnimatedIcon from "../AnimatedIcon/AnimatedIcon"
 
 const typeSkillsGroup = {
     frontend: {
-        label: "Front- \n end",
+        label: "Frontend",
         styleApplied: style.isFrontend
     },
     data_science: {
-        label: "Data \n Science",
+        label: "Data Science",
         styleApplied: style.isDataScience
     },
     backend: {
-        label: "Back- \n end",
+        label: "Backend",
         styleApplied: style.isBackend
     },
     dataviz: {
-        label: "Data- \n Viz",
+        label: "Data-Viz",
         styleApplied: style.isDataViz
     }
 }
@@ -25,24 +25,20 @@ export default function SkillsCard({ skillsGroup }) {
 
     return (
         <div className={style.card__container}>
-            <div className={`${style.card__image} ${selectedSkillsGroup.styleApplied}`}>
+            <h3 className={`${style.card__image} ${selectedSkillsGroup.styleApplied}`}>
                 {selectedSkillsGroup.label}
-            </div>
+            </h3>
             <div className={style.card__content}>
                 <div className={style.card__group_icons_container}>
                     {skillsGroup.collection_skills.map(
                         (skill) => (
-                            <div className={style.card__icons_container} key={skill.label}>
-                                <div className={`${style.card__icon} ${selectedSkillsGroup.styleApplied}`}>
-                                    <StyledImage
-                                        srcValue={`/images/tools_icons/${skill.name_image}`}
-                                        altValue={skill.label}
-                                        objectFitValue={"contain"}
-                                    />
-                                </div>
-                                <span className={style.card__icon_label}>
-                                    {skill.label}
-                                </span>
+                            <div className={style.card__container_each_icon}>
+                                <AnimatedIcon
+                                    key={skill.label}
+                                    style={selectedSkillsGroup.styleApplied}
+                                    icon={skill.name_image}
+                                    label={skill.label}
+                                />
                             </div>
                         )
                     )}

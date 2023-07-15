@@ -1,31 +1,34 @@
 import parse from 'html-react-parser'
 
+import commonStyles from "../styles/CommoStyles.module.css"
 import style from "./ProjectCard.module.css"
 
 import Button from "../Button/Button"
 import StyledImage from "../StyledImage/StyledImage"
 
+import AnimatedIcon from '../AnimatedIcon/AnimatedIcon'
+
 const typeLabel = {
     frontend: {
         label: "Frontend",
-        styleApplied: style.isFrontend
+        styleApplied: commonStyles.isFrontend
     },
     data_science: {
         label: "Data Science",
-        styleApplied: style.isDataScience
+        styleApplied: commonStyles.isDataScience
     },
     backend: {
         label: "Backend",
-        styleApplied: style.isBackend
+        styleApplied: commonStyles.isBackend
     },
     dataviz: {
         label: "Data Visualization",
-        styleApplied: style.isDataViz
+        styleApplied: commonStyles.isDataViz
     }
 }
 
 
-export default function ProjectCard({ title, short_desc, name_image, alt_image, type, url_code, url_online_site, used_technologies }) {
+export default function ProjectCard({ title, short_desc, name_image, alt_image, type, used_technologies, buttons }) {
     const selectedLabel = typeLabel[type]
 
     return (
@@ -42,29 +45,33 @@ export default function ProjectCard({ title, short_desc, name_image, alt_image, 
                 <h3>
                     {title}
                 </h3>
-                <p className={style.card__paragraph}>
+                <p>
                     {parse(short_desc)}
                 </p>
                 <section className={style.card__technologies}>
                     {
                         used_technologies.map(
                             (technology) => (
-                                <div className={style.card__technologies_object} key={technology.label}>
-                                    <StyledImage
-                                        objectFitValue="contain"
-                                        srcValue={`/images/tools_icons/${technology.name_image}`}
-                                        altValue={technology.label}
+                                <div className={style.card__container_each_icon}>
+                                    <AnimatedIcon
+                                        icon={technology.name_image}
+                                        label={technology.label}
+                                        style={selectedLabel.styleApplied}
                                     />
                                 </div>
                             )
                         )
                     }
                 </section>
-                <Button content={"Ver código"} isHighlighted={true} url={url_code} />
                 {
-                    url_online_site ?
-                        <Button content={"Ver sitio"} url={url_online_site} /> :
-                        null
+                    buttons.map(
+                        (button) => (
+                            button.url ? <Button content={button.label} url={button.url} isHighlighted={button.isHighlighted} /> : null
+                        )
+                    )
+                }
+                {
+
                 }
 
             </div>
