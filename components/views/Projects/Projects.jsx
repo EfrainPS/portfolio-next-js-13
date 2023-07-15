@@ -9,10 +9,10 @@ export default function Projects({ content }) {
 
     return (
         <section id='projects' className={styles.container}>
-            <h3 className={styles.title}>
+            <h2 className={styles.title}>
                 {initialData.title_page}
-            </h3>
-            <p className={styles.paragraph}>
+            </h2>
+            <p>
                 {parse(initialData.desc_page)}
             </p>
             {
@@ -28,6 +28,7 @@ export default function Projects({ content }) {
                             url_code={project.url_code_project}
                             url_online_site={project.url_online_site_project}
                             used_technologies={project.used_technologies}
+                            buttons={project.button}
                         />
                     )
                 )

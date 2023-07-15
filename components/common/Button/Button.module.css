@@ -2,8 +2,8 @@
     display: inline-block;
     width: fit-content;
     padding: 0.8rem 2rem;
-    border-radius: 5pt;
-    border: transparent solid 1px;
+    /* border-radius: 5pt; */
+    border: transparent solid 0.5px;
     margin-top: 1rem;
     margin-right: 1rem;
     cursor: pointer;
@@ -14,22 +14,30 @@
 }
 
 
-.Button__normal{
+.Button__main{
     background-color: var(--highlight__main__pink);
 }
 
-.Button__normal:hover{
+.Button__main:hover{
     background-color: #812f36;
-    border: var(--title__main__white) solid 1px;
+    border: var(--title__main__white) solid 0.5px;
     transition: 0.2s;
 }
 
-.Button__main{
+.Button__normal{
     background-color: var(--secondary__gray_dark);
-    border: var(--highlight__main__pink) solid 1px;
+    border-image: var(--gradient__color) 0.5;
 }
 
-.Button__main:hover{
+.Button__normal:hover{
     background-color: #080808;
     transition: 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+    .Button{
+        min-width: 6rem;
+        display: flex;
+        justify-content: center;
+    }
 }

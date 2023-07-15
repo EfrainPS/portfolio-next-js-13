@@ -4,7 +4,7 @@ export default function Button({ content, isHighlighted, url }) {
 
     return (
         <a className={`${style.Button} 
-            ${isHighlighted ? style.Button__main : style.Button__normal}`}
+            ${isHighlighted ? style.Button__main: style.Button__normal}`}
             href={url}
             target="_blank"
         >

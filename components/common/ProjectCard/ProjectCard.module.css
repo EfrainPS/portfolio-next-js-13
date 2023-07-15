@@ -1,45 +1,28 @@
 .card__container {
-    width: 90%;
+    width: 100%;
     min-height: 40vh;
-    margin: 5rem 0;
+    margin: 2rem 0;
 
     display: flex;
+
+    border-color: var(--secondary__gray_dark);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5pt;
 }
 
 .card__image {
     width: 40%;
     height: auto;
 
-    border-radius: 5pt;
+    border-radius: 5pt 0 0 5pt;
     overflow: hidden;
 }
 
 .card__content {
     width: 50%;
-    padding: 1rem 0 1rem 4rem;
-}
-
-.card__paragraph {
-    font-size: var(--paragraph__font_size);
-    color: var(--paragraph__gray);
-    text-align: left;
-    line-height: 1.3;
-}
-
-.isFrontend {
-    color: var(--tertiary__green);
-}
-
-.isDataScience {
-    color: var(--highlight__main__blue);
-}
-
-.isBackend {
-    color: var(--highlight__secondary__purple);
-}
-
-.isDataViz {
-    color: var(--highlight__main__yellow);
+    /* padding: 1rem 0 1rem 4rem; */
+    padding: 3rem;
 }
 
 .card__technologies {
@@ -61,15 +44,20 @@
     align-items: center;
 }
 
+.card__container_each_icon{
+    margin: 0 1rem 0 0;
+}
+
 @media only screen and (max-width: 768px) {
     .card__container{
         flex-direction: column;
-        width: 100%;
+        margin: 1rem 0;
     }
 
     .card__image {
         width: 100%;
         height: 12rem;
+        border-radius: 3pt 3pt 0 0;
     }
 
     .card__content {

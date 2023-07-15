@@ -1,5 +1,5 @@
 .main_presentation{
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,24 +12,7 @@
 .right_pane{
     width: 50%;
     height: 100%;
-}
-
-.title__principal{
-    font-size: var(--main_title__font_size);
-    margin: 0;
-}
-
-.title__secundary{
-    margin: 0;
-    font-size: var(--title__font_size);
-    color: var(--highlight__main__pink);
-}
-
-.paragraph__main{
-    font-size: var(--paragraph__font_size);
-    color: var(--paragraph__gray);
-    text-align: left;
-    line-height: 1.3;
+    padding-left: 5rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -45,6 +28,7 @@
     }
 
     .right_pane{
+        padding-left: 0;
         margin-top: 3rem;
         width: 100%;
         height: 30%;

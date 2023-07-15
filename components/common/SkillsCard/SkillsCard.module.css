@@ -4,17 +4,18 @@
 .isDataViz { color: var(--highlight__main__yellow); }
 
 .card__container {
-    width: 80%;
+    width: 40%;
     min-height: 20vh;
-    margin: 5rem 0;
+
+    margin: 1rem 0;
 
     display: flex;
+    flex-direction: column;
 }
 
 .card__image {
-    width: 40%;
+    width: 100%;
     height: auto;
-    font-size: 30pt;
 
     border-radius: 5pt;
     overflow: hidden;
@@ -24,72 +25,28 @@
 }
 
 .card__content {
-    width: 60%;
-    min-height: 20vh;
+    width: 100%;
     
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .card__group_icons_container {
-    background-color: var(--background__card__black);    
     display: flex;
     justify-content: flex-start;
     
-    width: 19rem;
+    width: 100%;
+    border-color: var(--secondary__gray_dark);
+    border-width: 2px;
+    border-style: solid;
     border-radius: 5pt;
 
     flex-wrap: wrap;
 }
 
-.card__icons_container{
-    height: fit-content;
+.card__container_each_icon{
     margin: 1rem;
 }
-
-.card__icon{
-    width: 3rem;
-    height: 3rem;
-    padding: 0.5rem;
-    border-radius: 5pt;
-    background-color: var(--title__main__white);
-    z-index: 20;
-    border: transparent solid 2px;
-
-    transition: 0.2s;
-}
-
-.card__icon_label{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: -1rem;
-    color: var(--title__main__white);
-    font-size: var(--paragraph__font_size);
-    text-align: center;
-    opacity: 0;
-    white-space: pre-line;
-
-    transition: 0.2s;
-}
-
-.card__icons_container:hover > .isFrontend{border-color: var(--tertiary__green);}
-.card__icons_container:hover > .isDataScience{border-color: var(--highlight__main__blue);}
-.card__icons_container:hover > .isBackend{border-color: var(--highlight__secondary__purple);}
-.card__icons_container:hover > .isDataViz{border-color: var(--highlight__main__yellow);}
-
-.card__icons_container:hover > .card__icon {
-    transform: translateY(-1rem);
-    transition: 0.5s;
-}
-
-.card__icons_container:hover > .card__icon_label {
-    transform: translateY(0.4rem);
-    opacity: 1;
-    transition: 0.5s;
-}
-
 
 @media only screen and (max-width: 768px) {
     .card__container{
@@ -99,19 +56,5 @@
 
     .card__image {
         width: 100%;
-        height: 12rem;
-    }
-
-    .card__content {
-        width: auto;
-        padding: 2rem 1.8rem;
-    }
-
-    .card__icon{
-        box-shadow: inset 0 4px 4px 0 #00000021;
-    }
-
-    .card__icons_container:hover > .card__icon {
-        box-shadow: none;
     }
 }

@@ -7,17 +7,19 @@ export default function Skills({ content }) {
     const initialData = content
     return (
         <section id='skills' className={styles.container}>
-            <h3 className={styles.title}>
+            <h2 className={styles.title}>
                 {initialData.title_page}
-            </h3>
-            <p className={styles.paragraph}>
+            </h2>
+            <p>
                 {parse(initialData.desc_page)}
             </p>
-            {initialData.skills.map(
-                (skillsGroup) => (
-                    <SkillsCard key={skillsGroup.type_skill} skillsGroup={skillsGroup}/>
-                )
-            )}
+            <div className={styles.skills__container}>
+                {initialData.skills.map(
+                    (skillsGroup) => (
+                        <SkillsCard key={skillsGroup.type_skill} skillsGroup={skillsGroup} />
+                    )
+                )}
+            </div>
         </section>
     )
 }

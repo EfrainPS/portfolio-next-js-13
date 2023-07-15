@@ -1,0 +1,15 @@
+.isFrontend {
+    color: var(--tertiary__green);
+}
+
+.isDataScience {
+    color: var(--highlight__main__blue);
+}
+
+.isBackend {
+    color: var(--highlight__secondary__purple);
+}
+
+.isDataViz {
+    color: var(--highlight__main__yellow);
+}
