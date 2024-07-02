@@ -1,0 +1,13 @@
+.circles{
+    width: 150px;
+    height: 150px;
+
+    position: fixed;
+    top: 80vh;
+    left: 5vw;
+
+    border-radius: 50%;
+    filter: blur(100px);
+
+    background-color: red;
+}

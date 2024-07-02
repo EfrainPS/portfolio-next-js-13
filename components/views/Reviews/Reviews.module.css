@@ -1,0 +1,21 @@
+.container {
+    padding: 0 20%;
+    background-color: #E3E3E3;
+
+    padding-top: 8rem;
+
+    height: 100vh;
+}
+
+.container h1 {
+    text-align: center;
+    color: var(--secondary__gray_dark);
+    margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        padding: 20% 10%;
+        height: auto;
+    }
+}

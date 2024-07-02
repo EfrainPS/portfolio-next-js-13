@@ -41,38 +41,45 @@ export default function ProjectCard({ title, short_desc, name_image, alt_image, 
                 />
             </div>
             <div className={style.card__content}>
-                <span className={selectedLabel.styleApplied}>{selectedLabel.label}</span>
-                <h3>
-                    {title}
-                </h3>
-                <p>
-                    {parse(short_desc)}
-                </p>
-                <section className={style.card__technologies}>
-                    {
-                        used_technologies.map(
-                            (technology) => (
-                                <div className={style.card__container_each_icon}>
-                                    <AnimatedIcon
-                                        icon={technology.name_image}
-                                        label={technology.label}
-                                        style={selectedLabel.styleApplied}
-                                    />
-                                </div>
+                <div className={style.card_description}>
+                    <h3>
+                        {title}
+                    </h3>
+                    <p>
+                        {parse(short_desc)}
+                    </p>
+                </div>
+                <div className={style.card_action}>
+                    <span className={selectedLabel.styleApplied}>{selectedLabel.label}</span>
+                    <hr />
+                    <section className={style.card__technologies}>
+                        {
+                            used_technologies.map(
+                                (technology) => (
+                                    <div className={style.card__container_each_icon}>
+                                        <AnimatedIcon
+                                            icon={technology.name_image}
+                                            label={technology.label}
+                                            style={selectedLabel.styleApplied}
+                                        />
+                                    </div>
+                                )
                             )
-                        )
-                    }
-                </section>
-                {
-                    buttons.map(
-                        (button) => (
-                            button.url ? <Button content={button.label} url={button.url} isHighlighted={button.isHighlighted} /> : null
-                        )
-                    )
-                }
-                {
-
-                }
+                        }
+                    </section>
+                    <section className={style.card_button_section}>
+                        {
+                            buttons.map(
+                                (button) => (
+                                    button.url ?
+                                        <div className={style.card_button}>
+                                            <Button content={button.label} url={button.url} isHighlighted={button.isHighlighted} /> 
+                                        </div> : null
+                                )
+                            )
+                        }
+                    </section>
+                </div>
 
             </div>
         </div>

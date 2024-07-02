@@ -1,8 +1,8 @@
 :root {
   /* Colors */
   /* --background__black: #010101; old version */
-  --background__black: #101015;
-  --background__black_opacity_30: #10101530;
+  --background__black: #000;
+  --background__black_opacity_30: #10101577;
   /* --background__card__black: #16161A; old version */
   --background__card__black: #2b2b2bdb;
   --stroke__black: #010101;
@@ -25,7 +25,7 @@
   --gradient__color: linear-gradient(to right, var(--highlight__main__pink), var(--highlight__main__blue));
 
   /* Fonts */
-  --main_title__font_size: 50pt;
+  --main_title__font_size: 30pt;
   --title__font_size: 18pt;
   --paragraph__font_size: 12pt;
   --labels__font_size: 10pt;
@@ -39,11 +39,10 @@ body {
   margin: 0;
   background-color: var(--background__black);
   color: white;
-  padding: 0 20%;
 
-  background-image: radial-gradient(rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
+  /* background-image: radial-gradient(rgba(11,27,103,1) 0%, rgba(16,66,157,1) 0%, rgba(11,27,103,1) 17.3%, rgba(11,27,103,1) 58.8%, rgba(11,27,103,1) 71.4%, rgba(16,66,157,1) 100.2%, rgba(187,187,187,1) 100.2% );
   background-image: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
-  background-image: radial-gradient( circle farthest-corner at 10% 20%,  var(--background__black) 0%, var(--secondary__gray_dark) 30%, var(--background__black_opacity_30) 90% );
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  var(--background__black) 0%, var(--secondary__gray_dark) 30%, var(--background__black_opacity_30) 90% ); */
 }
 
 strong {
@@ -56,12 +55,9 @@ h1 {
 }
 
 h2 {
+  color: var(--highlight__main__pink);
   margin: 0;
   font-size: var(--title__font_size);
-
-  background: var(--gradient__color);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 h3 {
@@ -78,10 +74,4 @@ p {
 span {
   font-size: var(--labels__font_size);
   color: var(--paragraph_highlight__gray);
-}
-
-@media only screen and (max-width: 768px) {
-  body {
-    padding: 0 10%;
-  }
 }

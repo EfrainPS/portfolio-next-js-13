@@ -1,57 +1,83 @@
 .card__container {
-    width: 100%;
-    min-height: 40vh;
+    width: 28vw;
+    height: fit-content;
     margin: 2rem 0;
+    overflow: hidden;
 
     display: flex;
+    flex-direction: column;
 
-    border-color: var(--secondary__gray_dark);
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5pt;
+    border-radius: 20px;
+
+    background-color: #141414;
 }
 
 .card__image {
-    width: 40%;
-    height: auto;
-
-    border-radius: 5pt 0 0 5pt;
+    height: 200px;
     overflow: hidden;
 }
 
 .card__content {
-    width: 50%;
-    /* padding: 1rem 0 1rem 4rem; */
-    padding: 3rem;
+    padding: 2rem;
 }
 
-.card__technologies {
-    display: flex;
-    margin-bottom: 1rem;
+.card_description h3{
+    text-align: center;
 }
 
-.card__technologies_object {
-    background-color: var(--title__main__white);
-    width: 30px;
-    height: 30px;
-    border-radius: 5pt;
-    margin-right: 1rem;
-    color: black;
-    padding: 2px;
+.card_description p{
+    /* With this code, you can reduce the text showed */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+.card_action{
+    padding-top: 1rem;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-.card__container_each_icon{
-    margin: 0 1rem 0 0;
+.card_action hr{
+    width: 100%;
+    color: var(--secondary__gray);
+}
+
+.card__technologies {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.card__container_each_icon {
+    margin: 0 5px;
+}
+
+.card_button_section{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.card_button {
+    margin: 0 10px;
 }
 
 @media only screen and (max-width: 768px) {
     .card__container{
+        width: 100%;
+        height: auto;
         flex-direction: column;
         margin: 1rem 0;
+    }
+
+    .card__content {
+        padding: 1rem 1.2rem;
     }
 
     .card__image {
@@ -60,8 +86,13 @@
         border-radius: 3pt 3pt 0 0;
     }
 
-    .card__content {
-        width: auto;
-        padding: 2rem 1.8rem;
+    .card_button_section{
+        flex-direction: column;
+        align-items: center;
     }
+
+    .card_button {
+        margin: 10px 0;
+    }
+
 }
