@@ -4,8 +4,8 @@
 }
 
 .card__icon{
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     padding: 0.5rem;
     border-radius: 5pt;
     background-color: var(--title__main__white);
@@ -22,7 +22,7 @@
     width: 100%;
     opacity: 0;
     white-space: pre-line;
-    font-size: 10pt;
+    font-size: 6pt;
     
     transition: 0.2s;
     transform: translateY(-1rem);

@@ -1,0 +1,57 @@
+.container{
+    width: 400px;
+    height: 450px;
+    background-color: white;
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+.review_section{
+    padding: 10%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review_section p {
+    text-align: center;
+}
+
+.profile_image_container{
+    width: 90px;
+    height: 90px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.reviewer_info_section {
+    height: 25%;
+    background-color: darkgrey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewer_info_section h3,
+.reviewer_info_section h4 {
+    margin: 0;
+    font-size: 1rem !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 80vw;
+        height: 450px;
+    }
+
+    .reviewer_info_section {
+        height: 28%;
+    }
+}

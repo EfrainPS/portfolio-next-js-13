@@ -1,36 +1,87 @@
 .main_presentation{
+    padding: 0 20%;
+
     height: 110vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_presentation p {
+    text-align: center;
+}
+
+.image_container{
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.container_label{
+    border-color: var(--tertiary__green);
+    border-radius: 50px;
+    border-width: 1px;
+    border-style: solid;
+
+    padding: 5px 10px;
+    margin: 1rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon_open{
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: var(--tertiary__green);
+    
+}
+
+.button_container{
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
-.left_pane{
-    width: 50%;
-}
-
-.right_pane{
-    width: 50%;
-    height: 100%;
-    padding-left: 5rem;
+.each_button {
+    margin: 0 10px;
 }
 
 @media only screen and (max-width: 768px) {
     .main_presentation{
+        padding: 0 10%;
+        
+        height: 120vh;
         padding-top: 4rem;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .left_pane{
-        width: 100%;
+    .image_container{
+        width: 150px;
+        height: 150px;
+    
+        border-radius: 25px;
     }
 
-    .right_pane{
-        padding-left: 0;
-        margin-top: 3rem;
-        width: 100%;
-        height: 30%;
+    .main_presentation h1,
+    .main_presentation h2,
+    .main_presentation p{
+        text-align: center;
     }
+
+    .button_container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .each_button {
+        margin: 10px 0;
+    }
+
 }
